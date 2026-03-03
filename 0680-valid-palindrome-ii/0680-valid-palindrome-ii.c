@@ -9,7 +9,6 @@ bool palindromehelper(char*s, int i, int j){
     return true;   
     }
 
-
 bool validPalindrome(char* s) {
    int i = 0;
    int j = strlen(s) - 1;
