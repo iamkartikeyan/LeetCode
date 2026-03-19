@@ -1,26 +1,23 @@
-void reverseRange(char *s, int start, int end) {
-    while (start < end) {
-        char temp = s[start];
-        s[start] = s[end];
-        s[end] = temp;
-        start++;
-        end--;
-    }
-}
-
 char* reverseStr(char* s, int k) {
-    int n = strlen(s);
-    for (int i = 0; i < n; i += 2 * k) {
+    int length = strlen(s);
+    
+    for (int i = 0; i < length; i += 2 * k) {
         
-        int start = i;
-        int end;
+        int first = i;
+        int last = i + k - 1;
         
-        if (i + k - 1 < n) {
-            end = i + k - 1; 
-        } else {
-            end = n - 1; 
+        if (last >= length) {
+            last = length - 1;
         }
-        reverseRange(s, start, end);
+        
+        while (first < last) {
+            char temp = s[first];
+            s[first] = s[last];
+            s[last] = temp;
+            
+            first++;
+            last--;
+        }
     }
     
     return s;
