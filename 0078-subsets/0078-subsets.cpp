@@ -6,11 +6,11 @@ public:
             result.push_back(temp);
             return;
         }
-
+        solve(i+1, nums, temp);
         temp.push_back(nums[i]);
         solve(i+1, nums, temp);
         temp.pop_back();
-        solve(i+1, nums, temp);
+
     }
 
     vector<vector<int>> subsets(vector<int>& nums) {
