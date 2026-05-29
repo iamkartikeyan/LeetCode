@@ -1,4 +1,3 @@
-
 class Solution {
 public:
 
@@ -15,8 +14,9 @@ public:
         }
 
         for (int i = row, j = col; i >= 0 && j < n; i--, j++) {
-            if (board[i][j] == 'Q')
+            if (board[i][j] == 'Q'){
                 return false;
+            }
         }
         return true;
     }
