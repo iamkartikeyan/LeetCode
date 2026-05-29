@@ -3,6 +3,7 @@ public:
     int minElement(vector<int>& nums) {
         vector<int> ans;
         int n = nums.size();
+        int min_val = INT_MAX;
         for (int i = 0; i < n ; i++){
             
             int j = 0;
@@ -11,8 +12,8 @@ public:
                 temp = temp + nums[i]%10;
                 nums[i] = nums[i]/10;
             }
-            ans.push_back(temp);
+            min_val = min(min_val, temp);
         }
-        return *min_element(ans.begin(), ans.end());
+        return min_val;
     }
 };
