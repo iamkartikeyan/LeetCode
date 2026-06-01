@@ -17,7 +17,6 @@ public:
             }
             
         }
-        cout << count;
         while ( i < cost.size()){
             count = count + cost[i];
             i++;
