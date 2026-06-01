@@ -7,14 +7,14 @@ public:
         int count = 0;
         for( i = 0; i < (cost.size()/3)*3 ; i = i+3){
             int k = cost[i];
-            for (int j = i ; j < i + 3; j++){
+            for (int j = i ; j < i + 2; j++){
                 count = count + cost[j];
-                if (cost[j]< k){
-                    k = cost[j];
-                }
-            } 
-                count = count - k;   
-
+            //     if (cost[j]< k){
+            //         k = cost[j];
+            //     }
+            // } 
+            //     count = count - k;   
+            }
             
         }
         cout << count;
