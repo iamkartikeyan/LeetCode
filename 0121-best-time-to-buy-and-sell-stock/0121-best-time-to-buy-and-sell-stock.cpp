@@ -5,10 +5,8 @@ public:
         int count = 0;
 
         for(int i = 1 ; i < prices.size() ; i++){
-            
             minprice = min(prices[i-1], minprice);
-            int temp = prices[i] - minprice;
-            count = max(temp, count);
+            count = max(prices[i] - minprice, count);
         }
         return count;
         
